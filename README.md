@@ -1,5 +1,5 @@
 <p align="center">
-    <h2 align="center">Violet Jekyll Template - <a href="http://sergiokopplin.github.io/violet/">Demo</a> · <a href="https://travis-ci.org/sergiokopplin/violet"><img src="https://travis-ci.org/sergiokopplin/violet.svg?branch=gh-pages" alt="Build Status" /></a></h2>
+    <h2 align="center">Using Violet Jekyll Template</h2>
 </p>
 
 <p align="center">A purple theme for girls and boys.</p>
