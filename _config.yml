@@ -1,5 +1,5 @@
 # main text of home
-name: Jane Doe
+name: 박경준
 bio: A Girl who travels the world eating noodles
 
 # twitter summary info
@@ -11,10 +11,10 @@ url: http://koppl.in/violet
 # your url: http://USERNAME.github.io
 
 # if you don't have any of social below, comment the line
-facebook: myfacebook
-twitter: mytwitter
-github: mygithub
-email: me@jane.doe
+facebook: facebook/?locale=ko_KR
+twitter: home?lang=ko
+github: developerPKJ/Mid-Term-Project.git
+email: 32201568@dankook.ac.kr
 
 gems:
   - jekyll-seo-tag
