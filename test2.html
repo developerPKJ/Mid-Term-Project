@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>기본 구조를 가진 표 만들기</title></head>
+<body>
+<h3>기본 구조를 가진 표</h3>
+<hr>
+<table border="1">
+	<caption>1학기 성적</caption>
+	<thead>
+		<tr><th>이름</th><th>HTML</th><th>CSS</th></tr>
+	</thead>
+	<tfoot>
+		<tr><th>합</th><th>225</th><th>230</th></tr>
+	</tfoot>
+	<tbody>
+		<tr><td>황기태</td><td>80</td><td>70</td></tr>
+		<tr><td>이재문</td><td>95</td><td rowspan="2">99</td></tr>
+		<tr><td colspan="2">이병은</td></tr>
+	</tbody>
+</table>
+
+<!--이미지의 경우 크기가 달라서 조절해줘야하는데 찌그러져서 까다로움-->
+<hr>
+<table>
+	<caption>좋아하는 과일</caption>
+	<tbody>
+		<tr>
+			<td><img src="media/apple.png"></td>
+			<td><img src="media/banana.png"></td>
+			<td><img src="media/mango.png"></td>
+		</tr>
+	</tbody>
+</table>
+
+<!--
+table의 경우 셀들이 merge(병합)할 수 도 있음
+<td>에 rowspan, colspan 속성통해 열 혹은 행을 머지할 수 있음
+-->
+
+
+
+
+
+<!--하이퍼링크   a href = "url" | "url#앵커이름 | "#앵커이름"
+//+ target = "윈도우이름"-->
+<hr>
+<ul>
+	<li><a href="http://www.naver.com">네이버</a></li>
+	<li><a href="http://www.daum.net">다음</a></li>
+</ul>
+신문 사이트 <!--이미지를 하이퍼링크로-->
+<ul>
+	<li><a href="http://www.etnews.com">
+		<img src="media/iconetnews.png" alt="전자신문">
+		</a>
+	</li>
+	<li><a href="http://www.chosun.com">
+		<img src="media/iconchosun.png" alt="조선일보">
+		</a>
+	</li>
+</ul>
+<!--링크 텍스트 처음 파랑, 한번 갔다오면 보라, 누르고있으면 빨강 / css로 색등 변경가능-->
+
+
+
+
+<h3>링크의 target 속성 활용</h3>
+<hr>
+<ul>
+	<li><a href="http://www.w3.org" target="_blank">W3C(새 윈도우, _blank)</a>
+	<li><a href="http://www.etnews.com" target="_self">전자신문(현재 윈도우, _self)</a>
+	<li><a href="http://www.naver.com" target="_parent">네이버(부모 윈도우, _parent)</a>
+	<li><a href="http://www.mk.co.kr" target="_top">매일경제신문(브라우저 윈도우, _top)</a>
+</ul>
+
+
+
+
+<!--링크와 앵커-->
+<h3>Elvis Presley</h3>
+<hr>
+<ul>
+	<li><a href="#love">Love me tender</a>
+	<li><a href="#can">Can't help falling in love</a>
+	<li><a href="#it">It's now or never</a>
+</ul>
+<h3 id="love">Love me tender</h3>
+Love me tender, Love me sweet, Never let me go.<br>
+You have made my life complete, <br>
+And I love you so.<br>
+Love me tender, Love me true, <br>
+All my dreams fulfilled.<br>
+For my darling I love you, And I always will.<br>
+<h3 id="can">Can't help falling in love</h3>
+Love me tender, Love me sweet, Never let me go.<br>
+You have made my life complete, And I love you so.<br>
+Love me tender, Love me true, All my dreams fulfilled.<br>
+For my darling I love you, And I always will.<br>
+<h3 id="it">It''s now or never</h3>
+It's now or never, Come hold me tight<br>
+Kiss me my darling, Be mine tonight<br>
+Tomorrow will be too late,<br>
+It's now or never. My love won't wait.<br>
+
+
+
+<!--잘 안씀-->
+<h3>다운</h3>
+<hr>
+<ul>
+	<li><a href="media/Elvis.png" download>엘비스 이미지 다운로드</a>
+	<li><a href="media/chapter9.pdf" download>chapter9.pdf 다운로드</a>
+	<li><a href="media/EmbraceableYou.mp3" download>mp3 다운로드</a>
+	<li><a href="ex2-09.html" download>예제 2-9 HTML 파일 다운로드</a>
+	<li><a href="media/test.hwp" download>한글 파일 다운로드</a>
+</ul>
+
+
+
+
+<!--src / srcdoc -둘중에는 srcdoc이 우선됨 그래서 둘중 하나만-->
+<!--iframe 윈도우 쪼개기-->
+<h3>2 개의 &lt;iframe&gt;을 가집니다.</h3>
+<hr>
+<iframe src="iframe1.html" width="200" height="150"></iframe>
+<iframe src="iframe2.html" width="200" height="100"></iframe>
+<iframe src="iframe3.html" width="200" height="100"></iframe>
+<!--iframe은 body에서만 head는 실제 코딩영역이 아님
+src속성이 없으면 iframe영역만 생성되고 빈공간
+srcdoc 불편해서 못써먹음(그냥 해당 문장내에 html 파일 하나 새로 작성하는 방식)-->
+
+<h3>2 개의 신문 사이트입니다.</h3>
+<hr>
+<iframe src="http://www.etnews.com" name="upper" width="300" height="300"></iframe>
+<iframe src="http://www.mk.co.kr" name="lower" width="300" height="300"></iframe>
+<!--윈도우는 기본적으로 스크롤이 있지만 없앨수 있음-->
+
+<!-- 교재 필수 타겟 속성 외우기-->
+<h3>target 속성 활용</h3>
+<hr>
+<iframe src="ex2-24-sitelist.html" name="left" width="200" height="300">
+</iframe>
+<iframe src="http://www.w3c.org" name="right" width="300" height="300">
+</iframe>
+
+
+
+
+
+<h3>비디오 삽입</h3>
+<hr>
+<video src="media/bear.mp4" width="320" height="240"
+	   controls>
+	브라우저가 video 태그를 지원하지 않습니다.
+</video>
+
+<h3>오디오 삽입</h3> 
+<hr>
+재생 버튼을 누르면 음악이 연주됩니다.
+<p>
+<audio src="media/EmbraceableYou.mp3" controls loop>
+   브라우저가 audio 태그를 지원하지 않습니다.
+</audio>
+</p>
+<!--audio, video는 표준 태그
+비 표준 미디어는 플러그인 필요(크롬은 autoplay 못하게 해놈)-->
+
+
+<!--교재교재교재교재교재교재교재교재교재교재교재교재교재교재교재교재교재교재교재교재-->
+<!--과제할때 autoplay나오면 무시하고 진행-->
+</body>
+</html>

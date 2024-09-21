@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<!--현대 컴퓨터의 역할 : automation(자동화) - 인간이 수행할 일을 기계가 대신함
+structured(제목) / semi-structured(html 태그) / unstructured(이메일)
+시맨틱 웹 필요성 : 검색엔진에 검색되지 않는 내용은 의미가 없어짐
+-> 컴퓨터는 자연어를 이해하지 못하니 검색이 불가, 내용에 대한 정보를 제공하여 검색이 가능하게 함
+: 시맨틱 태그(=사용자 태그)는 해당 태그의 목적을 검색 엔진에 전달하는 역활 수행-->
+
+<!--구글 검색 엔진 : 검색 뿐만 아니라 웹 페이지의 신뢰도, 수준, 사용자 의도 등을 지원하는 기능 존재-->
+
+<!--header : 페이지 설명
+nav : 하이퍼링크들 모아 놓은 섹션, 목차, 네비게이션 기능
+section : 문서의 절, 여러 개 존재 가능
+article : 섹션 하위 개념, 독립적인 컨텐츠 보유
+aside : 본문과 관련성이 약한 내용, 삽입 어구 단어
+footer : 주석느낌스-->
+
+<!--knowledge graph : 이름 <-> 긍정/부정적 단어 => 분류
+하지만 마지막 한 두 문장으로 반전되는건 찾기 어려움, 이걸 수행하는게 요즘 AI-->
+
+<!--블럭: 면적 / 인라인: 단어-->
+<head>
+<meta charset="UTF-8">
+<title>HTML5 문서 구조 시맨틱 태그 사용</title>
+<style>
+html, body { margin: 0; padding: 0; height: 100%; }
+header {
+	width: 100%; height: 15%; 
+	background: yellow;
+}
+nav { 
+	width: 15%; height: 70%; float: left;
+	background: orange;
+}
+section {
+	width: 70%; height: 70%; float: left;
+	background: olivedrab;
+}
+aside {
+	width: 15%; height: 70%; float: left;
+	background: orange;
+}
+footer { 
+	width: 100%; height: 15%; clear: both; 
+	background: plum;
+}
+</style>
+</head>
+<body>
+	<header>header</header>
+	<nav>nav</nav>
+	<section>section</section>
+	<aside>aside</aside> 
+	<footer>footer</footer>
+
+    <h3>figure 태그 활용</h3>
+    <hr>
+    <figure id="1-1">
+	<figcaption>alert() 함수 활용</figcaption>
+	<pre>
+	<code>function f() { alert("경고합니다"); }</code>
+	</pre>
+	<hr>
+	<small>실행결과</small>
+	<pre>
+		<img src="media/alert.png" alt="실행결과">
+	</pre>
+
+    <h3>details와 summary 태그</h3>
+Q &amp; A 리스트
+<hr>
+<details>
+   <summary>Question 1</summary>
+   <p>웹 개발자가 알아야 하는 언어 3 가지?</p>
+</details>
+<details>
+   <summary>Answer 1</summary>
+   <p>HTML5, CSS, Javascript</p>
+</details>
+
+</figure>
+</body>
+</html>

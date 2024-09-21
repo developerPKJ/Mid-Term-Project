@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>인라인 시맨틱 태그</title></head>
+<body>
+<h3>인라인 시맨틱 태그 사례</h3>
+<hr>
+<p>내일 <mark>HTML5 시험</mark><br>
+시간은 <time>09:00</time><br>
+난이도 <meter value="0.8" max="1.0">80%</meter><br>
+자료 업로딩(20%)
+	<progress value="2" max="10"></progress><br>
+</p>
+
+
+<h3>로그인 폼</h3>
+<hr>
+<form name="fo" method="get">
+사용자 ID : <input type="text" size="15" value=""><br>
+비밀 번호 : <input type="password" size="15" value="">
+<input type="submit" value="완료">
+</form>
+<!--폼 태그로 둘러쌓으면 name : 폼의 이름
+
+action: 폼 데이터를 처리할 웹 서버 응용프로그램의 이름
+submit버튼이 눌리면 브라우저는 action에 지정된 웹 서버 응용프로그램 실행 요청
+웹 서버 응용프로그램은 java, jsp, php, c/c++ 등 다양한 언어로 작성 가능
+
+method 폼 데이터를 웹 서버로 전송하는 형식(get/post)
+enctype : 인코딩 타입
+target : 서버로부터 전송받은 데이터를 띄울 윈도우 이름-->
+
+<!--인풋 type은 종류가 매우 다양함 책봐 책-->
+
+<h3>텍스트 area</h3>
+<hr>
+<form>
+이름 : <input type="text" value=""><br>
+암호 : <input type="password" value="" maxlength="4"><br>
+자소서 : <textarea cols="20" rows="5" name="" wrap="">이곳에 자기소개서 작성</textarea>
+<!--wrap: 자동 줄바꿈 처리 지정
+textarea 태그 속성도 많음 교재 봐 시험에 나오는건 교재에 있는것만-->
+
+
+<h3>datalist</h3>
+<hr>
+<form>
+나라 : <input type="text" name="country" list="countries"><br>
+		<datalist id="countries">
+			<option value="가나">
+			<option value="스위스">
+			<option value="브라질">
+		</datalist>
+보고싶은것 : <input type="text" list="what"><br>
+		<datalist id="what">
+			<option value="산">
+			<option value="바다">
+			<option value="도시">
+		</datalist>
+</form>
+</form>
+<!--input type:text의 list속성값과 datalist의 id값은 같아야함-->
+
+<h3>버튼을 만들자</h3>
+<hr>
+<form>
+	검색: <input type="text" size="10" value="">
+		  <input type="button" value="Q1">
+		  <button type="button">Q2</button><br>
+	submit 버튼 : <input type="submit" value="전송1">
+				<button type="submit">전송2</button><br>
+	reset 버튼 : <input type="reset" value="리셋1">
+				<button type="reset">리셋2</button><br>
+	이미지버튼 : <input type="image" src="media/button.png" alt="이미지 버튼">
+				<button type="button"><img src="media/button.png" alt="이미지 버튼"></button>
+</form>
+
+
+<h3>checkbox</h3>
+<hr>
+<form>
+	짜장면 <input type="checkbox" value="1">
+	짬뽕 <input type="checkbox" value="2" checked>
+	탕수육 <input type="checkbox" value="3">
+</form>
+
+<h3>radio</h3>
+<hr>
+<form>
+	<input type="radio" name="china" value="1">
+		짜장면<img src="media/jajang.png"><br>
+	<input type="radio" name="china" value="2" checked>
+		짬뽕<img src="media/jjambbong.png"><br>
+	<input type="radio" name="china" value="3">
+		탕수육<img src="media/tangsuyuk.png">
+</form>
+
+
+
+<h3>combo box</h3>
+<hr>
+<form>
+	<select name="china">
+		<option value="1">짜장면</option>
+		<option value="2" selected>짬뽕</option>
+		<option value="3">탕수육</option>
+	</select>
+</form>
+<!--datalist와 분간 잘 할 필요 있음-->
+
+
+<h3>&lt;label&gt; 태그로 로그인 폼 만들기</h3>
+<hr>
+<form name="fo" method="get">
+	<label>사용자 ID : <input type="text" size="15" value=""></label><br>
+	<label for="pass">비밀 번호 : </label>
+	<input id="pass" type="password" size="15" value="">
+	<input type="submit" value="완료">
+</form>
+<!--전역변수 사용하듯이 label을 미리 위에 모아서 적어놓고 사용할 수 있음 -> 깔끔함-->
+
+
+<h3>caption + (&lt;label&gt;이용)</h3>
+<hr>
+<form>
+	<label>
+		<input type="radio" name="china" value="1">
+		짜장면 <img src="media/jajang.png">
+	</label><br>
+	<label>
+		<input type="radio" name="china" value="2" checked>
+		짬뽕 <img src="media/jjambbong.png">
+	</label><br>
+	<label>
+		<input type="radio" name="china" value="3">
+		탕수육 <img src="media/tangsuyuk.png">
+	</label>
+</form>
+
+
+<h3>컬러다이얼로그로 색 입력</h3>
+<hr>
+<form>
+색 선택 <input type="color" value="#00BFFF"
+	onchange="document.body.style.color=this.value">
+</form>
+<!--value값을 코드말고 영어 표준명도 가능함-->
+
+
+<h3>시간 정보 입력 HTML5 폼 요소들</h3>
+초기 세팅 : 2022년 3월 1일 밤 9시 30분(10초 32)<br>
+시간을 변경해 보세요
+<hr>
+<form>
+<pre>
+month :	<input type="month" value="2022-03"><br> 
+week : 	<input type="week" value="2022-W09"><br>
+data : 	<input type="date" value="2022-03-01"><br> 
+time : 	<input type="time" value="21:30"><br>
+local:	<input type="datetime-local" 
+			value="2022-09-01T21:30:10.32"><br>
+</pre>
+</form>
+<!--html 위지위그 에디터가 가능할까?-->
+
+
+
+<hr>
+<form>
+<table>
+<tr><td>생일</td>
+	<td><input type="date" value="2003-02-09"></td></tr>
+<tr><td>생일파티시간</td>
+	<td><input type="time"></td></tr>
+<tr><td>생일파티장소</td>
+	<td><input type="text"></td></tr>
+</table>
+</form>
+
+
+<h3>number | range</h3>
+<hr>
+<form>
+	지속시간 (0.0~10.0시간) :
+	<input type="number" value="5.0" min="0.0" max="10.0"
+						 step="0.5"><br><br>
+	온도 설정 :	10&deg;
+	<input type="range" min="10" max="30"
+					list="temperatures">30&deg;
+	<datalist id="temperatures">
+ 		<option value="15" label="Low">
+ 		<option value="20" label="Medium">
+ 		<option value="25" label="High">
+	</datalist>
+</form>
+
+
+<h3>형식을 가진 텍스트박스</h3>
+<hr>
+<form>
+email : <input type="email" placeholder="id@host"><br>
+홈페이지 : <input type="url" placeholder="http://"><br>
+전화번호 : <input type="tel" placeholder="010-1234-5678">
+		<input type="submit" value="확인"><br><br>
+<hr>
+검색어 : <input type="search" placeholder="검색어">
+		<input type="button" value="검색">
+</form>
+<!--placeholder : 텍스트 공간에 배경에 깔리는 글씨(작성시 사라지는 그거)-->
+
+
+
+<h3>폼 인풋값을 묶기</h3>
+<hr>
+<form>
+	<fieldset>
+		<legend>회원정보</legend>
+		이메일 : <input type="email"><br>
+		홈페이지 : <input type="url"><br>
+		전화번호 : <input type="tel">
+	</fieldset>
+	<small>질문 : Tel. 010-111-1111</small>
+</form>
+<!--fieldset, legend 외우삼(없어도 그만이지만 이쁘자너)-->
+
+
+<!--form method
+get방식: 보낼때 사용자가 볼 수 있음, 북마크 가능
+post방식: 날라가는 url에는 보이지 않음 안에 암호화되어서 묶여서 전송됨, 북마크 불가-->
+</body>
+</html>
