@@ -7,31 +7,43 @@
 h3, li { /* 태그 이름 셀렉터(셀렉터 영역을 구분하는 방법) */
 	color : brown;
 }
-div > div > strong { /* 자식 셀렉터 */
+div > div > strong { /* 자식 셀렉터 - 부모 자식 관계만 '>'기호로 */
 	background : yellow;
 }
-ul strong { /* 자손 셀렉터 */
+ul strong { /* 자손 셀렉터 - "자손" 관계인 2개 이상의 태그 나열 */
 	color : dodgerblue;
 }
-.warning { /* class 셀렉터 */
+.warning { /* class 셀렉터, CSS의 class 이름은 .으로 시작함 */
 	color : red;
+	/*적용할 때는 속성값을 style ="~~~"로 하던걸 class=class"이름" 으로 간단하게 가능함*/
 }
-body.main { /* class 셀렉터 */
+body.main { /* class 셀렉터, body내에서만 가능 */
 	 background : aliceblue;
 }
-#list { /* id 셀렉터 */
+#list { /* id 셀렉터 위의 class랑 동일하지만 대신 id="이름"으로 가능 
+		div#list하면 div안에 list인 경우만 가능*/
 	background : mistyrose;
 }
 #list span{ /* 자손 셀렉터 */
 	color : forestgreen;
 }
-h3:first-letter { /* 가상 클래스 셀렉터 */
+h3:first-letter { /* 가상 클래스 셀렉터 - 태그에 조건문(: )을 걸어서 그 경우만 스타일 적용 */
 	color : red;
 }
 li:hover { /* 가상 클래스 셀렉터 */
 	background : yellowgreen;
 }
+/* 가상 클래스 셀렉터는 교재 174p.g에 나와있음 -- ***시험*** */
+
+
+input[type=text] { /*type 속성값이 text인 input 태그에 적용, 태그의 특정 속성에 대해 값이 일치하는 태그에만 스타일 적용*/
+	color:red;
+}
+
+/*전체 셀렉터, 와일드카드(*) 문자를 사용해 모든 태그에 적용할 스타일*/
+* { color : green; }
 </style></head>
+
 <body class="main">
 <h3>Web Programming</h3>
 <hr>
