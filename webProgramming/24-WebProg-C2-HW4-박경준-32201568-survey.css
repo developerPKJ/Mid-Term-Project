@@ -1,0 +1,19 @@
+h1 {
+    color: brown;
+    text-align: center;
+}
+
+p {
+    font-family: "휴먼편지체", 'Courier New', Courier, monospace;
+    font-size: 1em;
+    text-indent: 1em;
+}
+
+section {
+    background: pink;
+}
+
+footer {
+    background: orange;
+    border-radius: 20px;
+}
