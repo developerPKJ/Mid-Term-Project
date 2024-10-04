@@ -1,0 +1,51 @@
+<!--css로 html 태그가 출력되는 위치 지정(작성된 순서와 달리 배치 가능)
+display, position, left, right, top, bottom, float(요소 사이 간격),
+z-index, visibility(가시성), overflow(내용이 요소의 크기를 벗어 났을 때 어케 처리)
+해당 프로퍼티 들은 해당 챕터에 순서대로 설명-->
+
+<!--블럭태그 예 : p hl div ul
+인라인 태그 예 : span a img
+
+블럭 박스 / 인라인 박스
+
+블럭 박스는 새 라인에서 시작, 왼쪽에서 오른쪽 끝까지 통째로 점유, 옆에 다른 태그 배치 불가
+인라인 박스는 블록 안에 배치, 옆에 다른 태그 배치 가능-->
+
+<!--display : block, inline, inline-block       214p.g
+블록 특징 : 항상 새 라인에서 시작, 블록 박스 내에서만 배치, 옆에 다른 요소 배치 불가, 크기 조절 가능, margin등 겉 조절 가능
+인라인 특징 : 새라인에서 시작 못함(라인 안에 있음), 모든 박스 내 배치 가능, 옆에 다른 요소 배치 가능, 크기 조절 불가, margin조절 불가
+인라인 블록 특징 : 새라인에서 시작 못함(라인 안에 있음), 모든 박스 내 배치 가능, 옆에 다른 요소 배치 가능, 크기 조절 가능, margin등 겉 조절 가능-->
+
+<!--border축약 : wsc (width style color)-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>display 프로퍼티</title>
+<style>
+div {
+	border : 2px solid yellowgreen;
+	color : blue;
+	background : aliceblue;
+}
+span {
+	border : 3px dotted red;
+	background : yellow;
+}
+</style>
+</head>
+<body>
+<h3>인라인, 인라인 블록, 블록</h3>
+<hr>
+나는 <div style="display:none"> <!--none이라 안보이게 됨-->
+		div(none)</div>입니다.<br><br>
+나는 <div style="display:inline">
+		div(inline)</div> 입니다.<br><br>
+나는 <div style="display:inline-block; height:50px">
+		div(inline-block)</div> 입니다.<br><br>
+나는 <div>div<span style="display:block">
+		span(block)</span> 입니다.
+	</div>
+</body>
+</html>

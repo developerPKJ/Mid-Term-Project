@@ -1,0 +1,30 @@
+<!--fixed : 브라우저 안에 보이는 공간을 "뷰포트"라고 부름(브라우저 크기에 따라 생긴게 달라짐)
+이 뷰포트 안에 특정 위치에 항상 고정시켜 놓음-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>고정 배치</title>
+<style>
+#fixed {
+	position : fixed;
+	bottom : 10px;
+	right : 10px;
+	width : 100px;
+	padding : 5px;
+	background : red;
+	color : white;
+}
+</style>
+</head>
+<body>
+<h3>Merry Christmas!</h3>
+<hr>
+<img src="media/christmastree.png"
+	width="300" height="300"
+	alt="크리스마스 트리">
+<div id="fixed">예수님이 탄생하셨습니다.
+</div>
+</body>
+</html>

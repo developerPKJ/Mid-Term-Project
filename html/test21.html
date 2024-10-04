@@ -1,0 +1,50 @@
+<!--position
+static(정적), relative(상대), absolute(절대), fixed(고정),
+sticky(static과 같지만, 스크롤이 끝나는 지점에서 박스에 화면 고정), float : left, right (유동)-->
+
+<!--positon은 top, bottom, left, right, width, height 프로퍼티로 위치 크기 지정
+박스 top right bottom left로 둘러 쌓였다 생각하면 박스 안쪽으로 속성값이 + 바깥 방향이면 -, 218p.g 그림5-7에-->
+
+<!--static : 브라우저 디폴트 배치 방식 - 프로퍼티 값은 위치에 영향을 줄 수 없음-->
+
+<!--relative : 기존 위치에서 상대적으로 프로퍼티에 따라 얼만큼 이동할지-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>relative 배치</title>
+<style>
+div {
+	display : inline-block;
+	height : 50px;
+	width : 50px;
+	border : 1px solid lightgray;
+	text-align : center;
+	color : white;
+	background : red;
+}
+#down:hover {
+	position : relative;
+	left : 20px;
+	top : 20px;
+	background : green;
+}
+#up:hover {
+	position : relative;
+	right : 20px;
+	bottom : 20px;
+	background : green;
+}
+</style>
+</head>
+<body>
+<h3>상대 배치, relative</h3>
+<hr>
+	<div>T</div>
+	<div id="down">h</div>
+	<div >a</div>
+	<div>n</div>
+	<div id="up">k</div>
+	<div>s</div>
+</body>
+</html>
