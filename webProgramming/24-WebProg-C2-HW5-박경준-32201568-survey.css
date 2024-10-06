@@ -1,0 +1,39 @@
+html, body {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+}
+
+header {
+    background-color: yellow;
+    width: 100%;
+    height: 15%;
+    float: left;
+}
+
+h1 {
+    color: brown;
+    text-align: center;
+}
+
+p {
+    font-family: "휴먼편지체", 'Courier New', Courier, monospace;
+    font-size: 1em;
+    text-indent: 1em;
+}
+
+section {
+    background: pink;
+    margin: 15px 15px;
+    width: 100%;
+    height: 75%;
+    float: left;
+}
+
+footer {
+    background: violet;
+    border-radius: 20px;
+    width: 100%;
+    height: 10%;
+    float: left;
+}
