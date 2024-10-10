@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>script 태그에 자바스크립트 작성</title>
+<script> /*스크립트 태그는 헤드 바디 어디든 가능하고 여러번 작성도 가능*/
+function over(obj) {
+	obj.src="media/banana.png";
+}
+function out(obj) {
+	obj.src="media/apple.png";
+}
+</script>
+</head>
+<body>
+<h3>마우스 올려 보세요</h3>
+<hr>
+<img src="media/apple.png" alt="이미지"
+		onmouseover="over(this)"
+		onmouseout="out(this)">
+</body>
+</html>
