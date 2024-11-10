@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>갬블링 게임</title>
+        <style>
+            table {
+                border: 1px solid violet;
+                border-collapse: collapse;
+            }
+            table td {
+                width: 55px;
+                height: 60px;
+                padding: 0px;
+                font: italic 50px consolas;
+                color: blue;
+                text-align: center;
+                background-color: bisque;
+            }
+
+            div {
+                font: italic 20px consolas;
+                color: magenta;
+            }
+        </style>
+        <script>
+            let playGame = true;
+            let array = [0, 0, 0];
+            
+            //랜덤 숫자 생성
+            function rNum(e) {
+                if(playGame = false){
+                    return;
+                }
+
+                let n = Math.floor(Math.random() * 3); //0 이상 3미만 수 생성 후 소수점 이하 버림
+                let t = e.target;
+                t.innerHTML = n;
+
+                if(t.id == "1"){
+                    array[0] = n;
+                }
+                else if (t.id == "2"){
+                    array[1] = n;
+                }
+                else {
+                    array[2] = n;
+
+                    let result = document.getElementById("reset");
+
+                    if (array[0] == array[1] && array[1] == array[2]){
+                        result.innerHTML = "Success(click here to do again)";
+                    }
+                    else {
+                        result.innerHTML = "fail(click here to do again)";
+                    }
+                }
+            }
+
+            function reset() {
+                array[0, 0, 0];
+                document.getElementById("1").innerHTML = 0;
+                document.getElementById("2").innerHTML = 0;
+                document.getElementById("3").innerHTML = 0;
+                document.getElementById("reset").innerHTML = "";
+
+                playGame = true;
+            }
+        </script>
+    </head>
+
+    <body>
+        <h2><strong>갬블링 게임</strong></h2>
+        <p>각 숫자를 클릭하면 0에서 2사이의 난수로 바뀝니다. 모두 같은 수가 나오면 승리합니다.</p>
+        <hr>
+
+        <table>
+            <tr>
+                <td id="1" onclick="rNum(event)">0</td>
+                <td id="2" onclick="rNum(event)">0</td>
+                <td id="3" onclick="rNum(event)">0</td>
+            </tr>
+        </table>
+        
+        <div id="reset" onclick="reset()"></div>
+    </body>
+</html>
